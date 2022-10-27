@@ -1,53 +1,53 @@
-using UnityEngine;
+ï»¿using UnityEngine;
 
 namespace KID
 {
     /// <summary>
-    /// ¾Ç²ßÄæ¦ì Field
+    /// å­¸ç¿’æ¬„ä½ Field
     /// </summary>
     public class LearnField : MonoBehaviour
     {
-        // Äæ¦ì Field¡GÀx¦s¸ê®Æ
-        // »yªk¡G
-        // ­×¹¢µü ¸ê®ÆÃş«¬ Äæ¦ì¦WºÙ¡F
-        // ¨p¤H¡Gprivate¡A¶È¦b¦¹Ãş§O¤º¯à°÷¦s¨ú¡A¤£Åã¥Ü
+        // æ¬„ä½ Fieldï¼šå„²å­˜è³‡æ–™
+        // èªæ³•ï¼š
+        // ä¿®é£¾è© è³‡æ–™é¡å‹ æ¬„ä½åç¨±ï¼›
+        // ç§äººï¼šprivateï¼Œåƒ…åœ¨æ­¤é¡åˆ¥å…§èƒ½å¤ å­˜å–ï¼Œä¸é¡¯ç¤º
         private int lv;
 
-        // µ¥©ó «ü©w²Å¸¹¡G±Nµ¥¸¹¥kÃäªºµ²ªG«ü©wµ¹¥ªÃä
-        // ¤½¶}¡Gpublic¡A©Ò¦³Ãş§O³£¯à°÷¦s¨ú¡AÅã¥Ü
+        // ç­‰æ–¼ æŒ‡å®šç¬¦è™Ÿï¼šå°‡ç­‰è™Ÿå³é‚Šçš„çµæœæŒ‡å®šçµ¦å·¦é‚Š
+        // å…¬é–‹ï¼špublicï¼Œæ‰€æœ‰é¡åˆ¥éƒ½èƒ½å¤ å­˜å–ï¼Œé¡¯ç¤º
         
-        // ¾ã¼Æ int
+        // æ•´æ•¸ int
         public int enemy = 5;
 
-        // ¯BÂI¼Æ float
+        // æµ®é»æ•¸ float
         public float speed = 3.5f;
         public float jump = 7.5F;
 
-        // ¦r¦ê string
-        public string namePlayer = "¤pÃM¤h";
+        // å­—ä¸² string
+        public string namePlayer = "å°é¨å£«";
 
-        // ¥¬ªL­È bool
+        // å¸ƒæ—å€¼ bool
         public bool isPass = false;
         public bool hasWeapon = true;
 
-        // ¼ĞÃD
-        [Header("¦å¶q")]
+        // æ¨™é¡Œ
+        [Header("è¡€é‡")]
         public int hp = 999;
 
-        // ´£¥Ü
-        [Tooltip("ª±®a¹Cª±¸g¹Lªº®É¶¡¡C")]
+        // æç¤º
+        [Tooltip("ç©å®¶éŠç©ç¶“éçš„æ™‚é–“ã€‚")]
         public float time = 10.5f;
 
-        // ¼Æ­È±M¥Î½d³ò(³Ì¤p­È¡A³Ì¤j­È)
+        // æ•¸å€¼å°ˆç”¨ç¯„åœ(æœ€å°å€¼ï¼Œæœ€å¤§å€¼)
         [Range(1, 99)]
         public int level = 10;
         [Range(2f, 10.5f)]
         public float walkSpeed = 3.5f;
-        // ¤£¤ä´© int »P float ¥H¥~ªº¸ê®ÆÃş«¬
+        // ä¸æ”¯æ´ int èˆ‡ float ä»¥å¤–çš„è³‡æ–™é¡å‹
         [Range(1, 100)]
         public bool isOpen;
 
-        // §Ç¦C¤ÆÄæ¦ì¡GÅã¥Ü¨p¤HÄæ¦ì
+        // åºåˆ—åŒ–æ¬„ä½ï¼šé¡¯ç¤ºç§äººæ¬„ä½
         [SerializeField]
         private int countBoomb = 7;
     }
