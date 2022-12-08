@@ -1,24 +1,24 @@
-using UnityEngine;
+ï»¿using UnityEngine;
 
 namespace KID
 {
     /// <summary>
-    /// ª±®aµ²§ôºŞ²z¡G¦º¤`©Î¹LÃö
+    /// ç©å®¶çµæŸç®¡ç†ï¼šæ­»äº¡æˆ–éé—œ
     /// </summary>
     public class PlayerFinal : MonoBehaviour
     {
-        // ³Q§R°£®É·|°õ¦æ¤@¦¸
+        // è¢«åˆªé™¤æ™‚æœƒåŸ·è¡Œä¸€æ¬¡
         private void OnDestroy()
         {
-            // ¦º¤`
-            FinalManager.instance.GameOver("¬D¾Ô¥¢±Ñ¡I");
+            // æ­»äº¡
+            FinalManager.instance.GameOver("æŒ‘æˆ°å¤±æ•—ï¼");
         }
 
-        // ¸I¨ì¤Ä¿ï Is Trigger ª«¥ó®É·|°õ¦æ¤@¦¸
+        // ç¢°åˆ°å‹¾é¸ Is Trigger ç‰©ä»¶æ™‚æœƒåŸ·è¡Œä¸€æ¬¡
         private void OnTriggerEnter2D(Collider2D collision)
         {
-            // ¹LÃö
-            FinalManager.instance.GameOver("¹CÀ¸³q¹L");
+            // éé—œ
+            FinalManager.instance.GameOver("éŠæˆ²é€šé");
         }
     }
 }

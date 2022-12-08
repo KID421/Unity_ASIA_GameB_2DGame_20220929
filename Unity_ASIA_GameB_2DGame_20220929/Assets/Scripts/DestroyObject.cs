@@ -1,31 +1,31 @@
-using UnityEngine;
+ï»¿using UnityEngine;
 
 namespace KID
 {
     /// <summary>
-    /// §R°£ª«¥ó
+    /// åˆªé™¤ç‰©ä»¶
     /// </summary>
     public class DestroyObject : MonoBehaviour
     {
-        [SerializeField, Header("§R°£®É¶¡"), Range(0, 3)]
+        [SerializeField, Header("åˆªé™¤æ™‚é–“"), Range(0, 3)]
         private float destroyTime = 0.5f;
-        [SerializeField, Header("¸I¨ì·|§R°£ªº¦WºÙ")]
+        [SerializeField, Header("ç¢°åˆ°æœƒåˆªé™¤çš„åç¨±")]
         private string nameToDestroy;
 
         private void Awake()
         {
-            // gameObject ¦¹¸}¥»ªº¹CÀ¸«Øª«¥ó
-            // §R°£(ª«¥ó¡A§R°£®É¶¡)
+            // gameObject æ­¤è…³æœ¬çš„éŠæˆ²å»ºç‰©ä»¶
+            // åˆªé™¤(ç‰©ä»¶ï¼Œåˆªé™¤æ™‚é–“)
             Destroy(gameObject, destroyTime);
         }
 
-        // ¥i¨£¨Æ¥ó¡G·í´è¬V¤¸¥ó (Randerer) ¥X²{¦b Scene ©Î Game ®É°õ¦æ¤@¦¸
+        // å¯è¦‹äº‹ä»¶ï¼šç•¶æ¸²æŸ“å…ƒä»¶ (Randerer) å‡ºç¾åœ¨ Scene æˆ– Game æ™‚åŸ·è¡Œä¸€æ¬¡
         private void OnBecameVisible()
         {
             
         }
 
-        // ¤£¥i¨£¨Æ¥ó¡G·í´è¬V¤¸¥ó (Randerer) ®ø¥¢¦b Scene ©Î Game ®É°õ¦æ¤@¦¸
+        // ä¸å¯è¦‹äº‹ä»¶ï¼šç•¶æ¸²æŸ“å…ƒä»¶ (Randerer) æ¶ˆå¤±åœ¨ Scene æˆ– Game æ™‚åŸ·è¡Œä¸€æ¬¡
         private void OnBecameInvisible()
         {
             Destroy(gameObject);
@@ -33,7 +33,7 @@ namespace KID
 
         private void OnCollisionEnter2D(Collision2D collision)
         {
-            // ¦pªG ¸I¨ìª«¥óªº¦WºÙ ¥]§t (¸I¨ì·|§R°£ªº¦WºÙ) ´N §R°£ª«¥ó
+            // å¦‚æœ ç¢°åˆ°ç‰©ä»¶çš„åç¨± åŒ…å« (ç¢°åˆ°æœƒåˆªé™¤çš„åç¨±) å°± åˆªé™¤ç‰©ä»¶
             if (collision.gameObject.name.Contains(nameToDestroy))
             {
                 Destroy(gameObject);
